@@ -44,7 +44,7 @@ class Router {
         this.node.innerHTML = "";
         let component = comp || this.activeRoute();
         if (component){
-            let content = component.render();
+            let content = component.render(this);
             this.node.appendChild(content);
         }
     }

@@ -29,7 +29,7 @@ const Compose = {
         return html;
     },
 
-    render() {
+    render(router=null) {
         let container = document.createElement("div");
         container.className = "new-message";
         container.innerHTML = this.renderForm();
@@ -42,6 +42,7 @@ const Compose = {
             e.preventDefault();
             MessageStore.sendDraft();
             history.pushState({section: 'inbox'}, "", 'inbox');
+            router.render();
         });
 
         return container;
