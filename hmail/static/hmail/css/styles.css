@@ -57,10 +57,11 @@ table {
     flex-direction: column;
     min-height: 100vh;
     font-family: sans-serif;
+    background: rgb(240, 240, 240);
 }
 
 header {
-    background: rgb(240, 240, 240);
+
 }
 
 #logo {
@@ -92,10 +93,11 @@ main {
     
     display: flex;
     flex: 1;
+    
 }
 
 nav {
-    background: rgb(240, 240, 240);
+
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -135,10 +137,10 @@ nav > button:hover {
     border-radius: 15px;
 }
 
-
-
 #content {
-    border-radius: 50px;
+    width: 70%;
+    border-radius: 20px;
+    background-color: white;
 }
 
 footer {
@@ -146,4 +148,42 @@ footer {
     margin-top: auto;
     padding: 20px;
     text-align: center;
+}
+
+.messages {
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+.message {
+    background: rgb(201, 199, 199);
+    padding: 10px 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.message:hover {
+    border-bottom: 1px solid  black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.from {
+    display: inline-block;
+    width: 200px;
+}
+
+.subject {
+    font-weight: bold;
+    width: 150px;
+    margin-right: 5px;
+}
+
+.body {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: bottom;
 }
