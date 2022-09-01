@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <title>HMail</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'hmail/css/styles.css' %}" rel="stylesheet"/>
+        <script src="{% static 'hmail/js/bundle.js' %}"></script>
+    </head>
+
+    <body>
+        <div id="page-container">
+            <header>
+                <section id="logo">
+                    <h1><span class="red">H</span><span class="green">m</span><span class="yellow">a</span><span class="blue">i</span><span class="green">l</span></h1>
+                </section>   
+            </header>
+            <main>
+                <nav>
+                    <button>Compose</button>
+                    <ul id="sidenav">
+                        <li id="inbox">Inbox</li>
+                        <li id="sent">Sent</li>
+                    </ul>
+                </nav>
+                <div id="content"></div>
+            </main>
+            <footer>
+                <p>Copyright 2022 &copy;</p>
+            </footer>
+        </div>
+    </body>
+</DOCTYPE>
