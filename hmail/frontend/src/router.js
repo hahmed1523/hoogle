@@ -9,13 +9,19 @@ class Router {
         const router = this;
         router.render();
 
-        // Iterate over nav items and add listener. 
+        // Iterate over nav items and add listener. Add listener to compose button as well.
         document.querySelectorAll('#sidenav > li').forEach(li => {
             li.onclick = function() {
                 const section = this.id;
                 history.pushState({section: section}, "", `${section}`);
                 router.render();
         }});
+
+        document.querySelector('#compose').onclick = function() {
+            const section = this.id;
+            history.pushState({section: section}, "", `${section}`);
+            router.render();
+        }
     
         // Add back button functionality
         window.onpopstate = function(event) {
@@ -24,17 +30,6 @@ class Router {
                 router.render(component);
             }   
         }
-
-        // Add reload button functionality
-        // let current_path = window.location.pathname.substring(1);
-        // console.log(current_path);
-        // if (window.performance.getEntries('navigation')[0].type ==='reload'){
-        //     console.log("hello");
-        //     debugger
-        //     console.log(window.location.pathname.substring(1));
-        //     const component = this.activeRoute();
-        //     router.render(component);
-        // }
     }
         
 
